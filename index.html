@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Battleship</title>
+</head>
+<body>
+
+    <div class="content-fluid d-flex flex-column justify-content-center">
+
+        <div>
+            <p class="fs-1 text-center">Battleship</p>
+        </div>
+
+        <div class="content-fluid d-flex justify-content-center">
+            <table id="game" class="table table-light" style="border-collapse: separate !important; max-width: 500px;">
+                <thead>
+                    <tr class="table-secondary">
+                        <th></th>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>D</th>
+                        <th>E</th>
+                        <th>F</th>
+                        <th>G</th>
+                        <th>H</th>
+                        <th>I</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="row1" style="height: 50px;">
+                        <th class="table-secondary">1</th>
+                        <td id="a1" style="width: 50px;"></th>
+                        <td id="b1" style="width: 50px;"></th>
+                        <td id="c1" style="width: 50px;"></th>
+                        <td id="d1" style="width: 50px;"></th>
+                        <td id="e1" style="width: 50px;"></th>
+                        <td id="f1" style="width: 50px;"></th>
+                        <td id="g1" style="width: 50px;"></th>
+                        <td id="h1" style="width: 50px;"></th>
+                        <td id="i1" style="width: 50px;"></th>
+                    </tr>
+                    <tr id="row2" style="height: 50px;">
+                        <th class="table-secondary">2</th>
+                        <td id="a2"></td>
+                        <td id="b2"></td>
+                        <td id="c2"></td>
+                        <td id="d2"></td>
+                        <td id="e2"></td>
+                        <td id="f2"></td>
+                        <td id="g2"></td>
+                        <td id="h2"></td>
+                        <td id="i2"></td>
+                    </tr>
+                    <tr id="row3" style="height: 50px;">
+                        <th class="table-secondary">3</th>
+                        <td id="a3"></td>
+                        <td id="b3"></td>
+                        <td id="c3"></td>
+                        <td id="d3"></td>
+                        <td id="e3"></td>
+                        <td id="f3"></td>
+                        <td id="g3"></td>
+                        <td id="h3"></td>
+                        <td id="i3"></td>
+                    </tr>
+                    <tr id="row4" style="height: 50px;">
+                        <th class="table-secondary">4</th>
+                        <td id="a4"></td>
+                        <td id="b4"></td>
+                        <td id="c4"></td>
+                        <td id="d4"></td>
+                        <td id="e4"></td>
+                        <td id="f4"></td>
+                        <td id="g4"></td>
+                        <td id="h4"></td>
+                        <td id="i4"></td>
+                    </tr>
+                    <tr id="row5" style="height: 50px;">
+                        <th class="table-secondary">5</th>
+                        <td id="a5"></td>
+                        <td id="b5"></td>
+                        <td id="c5"></td>
+                        <td id="d5"></td>
+                        <td id="e5"></td>
+                        <td id="f5"></td>
+                        <td id="g5"></td>
+                        <td id="h5"></td>
+                        <td id="i5"></td>
+                    </tr>
+                    <tr id="row6" style="height: 50px;">
+                        <th class="table-secondary">6</th>
+                        <td id="a6"></td>
+                        <td id="b6"></td>
+                        <td id="c6"></td>
+                        <td id="d6"></td>
+                        <td id="e6"></td>
+                        <td id="f6"></td>
+                        <td id="g6"></td>
+                        <td id="h6"></td>
+                        <td id="i6"></td>
+                    </tr>
+                    <tr id="row7" style="height: 50px;">
+                        <th class="table-secondary">7</th>
+                        <td id="a7"></td>
+                        <td id="b7"></td>
+                        <td id="c7"></td>
+                        <td id="d7"></td>
+                        <td id="e7"></td>
+                        <td id="f7"></td>
+                        <td id="g7"></td>
+                        <td id="h7"></td>
+                        <td id="i7"></td>
+                    </tr>
+                    <tr id="row8" style="height: 50px;">
+                        <th class="table-secondary">8</th>
+                        <td id="a8"></td>
+                        <td id="b8"></td>
+                        <td id="c8"></td>
+                        <td id="d8"></td>
+                        <td id="e8"></td>
+                        <td id="f8"></td>
+                        <td id="g8"></td>
+                        <td id="h8"></td>
+                        <td id="i8"></td>
+                    </tr>
+                    <tr id="row9" style="height: 50px;">
+                        <th class="table-secondary">9</th>
+                        <td id="a9"></td>
+                        <td id="b9"></td>
+                        <td id="c9"></td>
+                        <td id="d9"></td>
+                        <td id="e9"></td>
+                        <td id="f9"></td>
+                        <td id="g9"></td>
+                        <td id="h9"></td>
+                        <td id="i9"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="content-fluid d-flex justify-content-center">
+            <div class="input-group mb-3 w-50 m-1" style="width: 500px !important;">
+                <form class="d-flex" id="coordsInput">
+                    <input type="text" class="form-control" placeholder="X coords (letters)" aria-label="X" aria-describedby="button-addon2">
+                    <input type="number" class="form-control" placeholder="Y coords (numbers)" aria-label="Y" aria-describedby="button-addon2">
+                </form>
+                <button style="width: 85px;" class="btn btn-danger" type="button" id="fire">Fire</button>
+            </div>
+        </div>
+        
+        <div class="content-fluid d-flex justify-content-center gap-2 m-1">
+            <button onClick="window.location.reload();" id="restart" class="btn btn-primary" style="width: 200px;" type="button">Restart</button>
+            <button id="show" class="btn btn-primary" style="width: 200px;" type="button">Show Ships</button>
+        </div>  
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="./assets/scripts/app.js"></script>
+</body>
+</html>
